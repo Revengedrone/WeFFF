@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    ssr: {
+      // "cloudflare:workers" only exists inside the actual Cloudflare Workers runtime —
+      // tell Vite not to try bundling/resolving it at build time.
+      external: ["cloudflare:workers"],
+    },
+  },
 });
