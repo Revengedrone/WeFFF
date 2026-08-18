@@ -130,18 +130,6 @@ function LoginPage() {
       <section className="relative overflow-hidden">
         <img src={cityImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
-          <div className="flex flex-col justify-center text-white">
-            <h1 className="text-3xl font-light md:text-4xl">Welcome back to</h1>
-            <h2 className="mt-1 text-4xl font-bold md:text-5xl">SMITH BANK</h2>
-            <div className="mt-3 h-1 w-16 rounded bg-[#FFCD00]" />
-            <p className="mt-6 max-w-md text-white/80">
-              Securely access your accounts, transfer funds, pay bills, and manage your finances all in one place.
-            </p>
-            <div className="mt-10 hidden md:block">
-              <Shield className="h-24 w-24 text-[#FFCD00]/70" strokeWidth={1.2} />
-            </div>
-          </div>
-
           {/* Card */}
           <form onSubmit={onSubmit} className="mx-auto w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl">
             <div className="flex flex-col items-center">
@@ -248,6 +236,18 @@ function LoginPage() {
               </div>
             </div>
           </form>
+
+          <div className="flex flex-col justify-center text-slate-900">
+            <h1 className="text-3xl font-light md:text-4xl">Welcome back to</h1>
+            <h2 className="mt-1 text-4xl font-bold md:text-5xl">SMITH BANK</h2>
+            <div className="mt-3 h-1 w-16 rounded bg-[#FFCD00]" />
+            <p className="mt-6 max-w-md text-slate-700">
+              Securely access your accounts, transfer funds, pay bills, and manage your finances all in one place.
+            </p>
+            <div className="mt-10 hidden md:block">
+              <Shield className="h-24 w-24 text-[#D71E28]/70" strokeWidth={1.2} />
+            </div>
+          </div>
         </div>
       </section>
 
