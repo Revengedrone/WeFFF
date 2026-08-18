@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Eye, EyeOff, Lock, User, Shield, ShieldCheck, Headphones, Smartphone, Globe } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { seedDemoUsers } from "@/lib/seed.functions";
-import cityImg from "@/assets/city-skyline.jpg";
+import cityImg from "@/assets/desert.png";
 
 export const Route = createFileRoute("/")({
   component: LoginPage,
