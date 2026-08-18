@@ -128,8 +128,7 @@ function LoginPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#5c0e13] via-[#8f1620] to-[#D71E28]" />
-        <img src={cityImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-40 mix-blend-screen" />
+        <img src={cityImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
           <div className="flex flex-col justify-center text-white">
             <h1 className="text-3xl font-light md:text-4xl">Welcome back to</h1>
