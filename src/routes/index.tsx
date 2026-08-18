@@ -133,10 +133,7 @@ function LoginPage() {
           {/* Card */}
           <form onSubmit={onSubmit} className="mx-auto w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl">
             <div className="flex flex-col items-center">
-              <svg viewBox="0 0 40 40" className="h-10 w-10" fill="none" aria-hidden>
-                <path d="M20 2 L36 11 V29 L20 38 L4 29 V11 Z" fill="#D71E28" />
-                <path d="M20 8 L30 14 V26 L20 32 L10 26 V14 Z" fill="#FFCD00" />
-              </svg>
+              <img src="/logoo.png" alt="SMITH BANK" className="h-16 w-16 object-contain" />
               <h3 className="mt-3 text-2xl font-bold text-slate-900">
                 {mode === "signin" ? "Welcome" : "Create your account"}
               </h3>
