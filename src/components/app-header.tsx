@@ -16,8 +16,8 @@ const NAV_LINKS: { label: string; to?: string }[] = [
 function Logo() {
   return (
     <Link to="/dashboard" className="flex items-center gap-2">
-      <img src="/logo.png" alt="Logo" className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8" />
-      <span className="text-base font-extrabold tracking-tight text-[#0a2a6b] sm:text-xl">Smith Bank</span>
+      <img src="/logoo.png" alt="Logo" className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8" />
+      <span className="text-base font-extrabold tracking-tight text-[#D71E28] sm:text-xl">Smith Bank</span>
     </Link>
   );
 }
@@ -37,11 +37,11 @@ export function AppHeader({ title }: { title: string }) {
         <Logo />
         <nav className="hidden justify-center gap-6 text-sm font-medium text-slate-700 lg:flex">
           {NAV_LINKS.map(l => l.to ? (
-            <Link key={l.label} to={l.to} className="hover:text-blue-600" activeProps={{ className: "text-blue-600" }}>
+            <Link key={l.label} to={l.to} className="hover:text-[#D71E28]" activeProps={{ className: "text-[#D71E28]" }}>
               {l.label}
             </Link>
           ) : (
-            <a key={l.label} href="#" className="hover:text-blue-600">{l.label}</a>
+            <a key={l.label} href="#" className="hover:text-[#D71E28]">{l.label}</a>
           ))}
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
@@ -83,9 +83,9 @@ export function AppFooter() {
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 py-4 text-xs text-slate-500 sm:px-6">
         <span>© 2026 Smith Bank. All rights reserved.</span>
         <span className="hidden sm:inline">|</span>
-        <a href="#" className="text-blue-600">Privacy Policy</a>
-        <a href="#" className="text-blue-600">Terms of Use</a>
-        <a href="#" className="text-blue-600">Security Center</a>
+        <a href="#" className="text-[#D71E28]">Privacy Policy</a>
+        <a href="#" className="text-[#D71E28]">Terms of Use</a>
+        <a href="#" className="text-[#D71E28]">Security Center</a>
       </div>
     </footer>
   );
