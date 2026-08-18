@@ -13,10 +13,10 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    ssr: {
-      // "cloudflare:workers" only exists inside the actual Cloudflare Workers runtime —
-      // tell Vite not to try bundling/resolving it at build time.
-      external: ["cloudflare:workers"],
+    build: {
+      rolldownOptions: {
+        external: ["cloudflare:workers"],
+      },
     },
   },
 });
