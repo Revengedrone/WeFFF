@@ -25,7 +25,7 @@ function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <img src="/logo.png" alt="Logo" className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8" />
-      <span className="text-xl font-extrabold tracking-tight text-[#0a2a6b]">SMITH BANK</span>
+      <span className="text-xl font-extrabold tracking-tight text-[#D71E28]">SMITH BANK</span>
     </div>
   );
 }
@@ -128,18 +128,18 @@ function LoginPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071a4a] via-[#0b2670] to-[#1e40af]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#5c0e13] via-[#8f1620] to-[#D71E28]" />
         <img src={cityImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-40 mix-blend-screen" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
           <div className="flex flex-col justify-center text-white">
             <h1 className="text-3xl font-light md:text-4xl">Welcome back to</h1>
             <h2 className="mt-1 text-4xl font-bold md:text-5xl">SMITH BANK</h2>
-            <div className="mt-3 h-1 w-16 rounded bg-blue-400" />
-            <p className="mt-6 max-w-md text-blue-100">
+            <div className="mt-3 h-1 w-16 rounded bg-[#FFCD00]" />
+            <p className="mt-6 max-w-md text-white/80">
               Securely access your accounts, transfer funds, pay bills, and manage your finances all in one place.
             </p>
             <div className="mt-10 hidden md:block">
-              <Shield className="h-24 w-24 text-blue-300/70" strokeWidth={1.2} />
+              <Shield className="h-24 w-24 text-[#FFCD00]/70" strokeWidth={1.2} />
             </div>
           </div>
 
@@ -147,8 +147,8 @@ function LoginPage() {
           <form onSubmit={onSubmit} className="mx-auto w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl">
             <div className="flex flex-col items-center">
               <svg viewBox="0 0 40 40" className="h-10 w-10" fill="none" aria-hidden>
-                <path d="M20 2 L36 11 V29 L20 38 L4 29 V11 Z" fill="#1e40af" />
-                <path d="M20 8 L30 14 V26 L20 32 L10 26 V14 Z" fill="#3b82f6" />
+                <path d="M20 2 L36 11 V29 L20 38 L4 29 V11 Z" fill="#D71E28" />
+                <path d="M20 8 L30 14 V26 L20 32 L10 26 V14 Z" fill="#FFCD00" />
               </svg>
               <h3 className="mt-3 text-2xl font-bold text-slate-900">
                 {mode === "signin" ? "Welcome" : "Create your account"}
@@ -161,7 +161,7 @@ function LoginPage() {
             <div className="mt-6 space-y-4">
               <div>
                 <label className="text-sm font-medium text-slate-700">Email or Username</label>
-                <div className={`mt-1 flex items-center rounded-lg border px-3 focus-within:border-blue-500 ${fieldErrors.email ? "border-red-400 bg-red-50/50" : "border-slate-200"}`}>
+                <div className={`mt-1 flex items-center rounded-lg border px-3 focus-within:border-[#D71E28] ${fieldErrors.email ? "border-red-400 bg-red-50/50" : "border-slate-200"}`}>
                   <User className="h-4 w-4 text-slate-400" />
                   <input
                     type="text" inputMode="email" autoComplete="email" value={email}
@@ -175,7 +175,7 @@ function LoginPage() {
 
               <div>
                 <label className="text-sm font-medium text-slate-700">Password</label>
-                <div className={`mt-1 flex items-center rounded-lg border px-3 focus-within:border-blue-500 ${fieldErrors.password ? "border-red-400 bg-red-50/50" : "border-slate-200"}`}>
+                <div className={`mt-1 flex items-center rounded-lg border px-3 focus-within:border-[#D71E28] ${fieldErrors.password ? "border-red-400 bg-red-50/50" : "border-slate-200"}`}>
                   <Lock className="h-4 w-4 text-slate-400" />
                   <input
                     type={showPw ? "text" : "password"} autoComplete={mode === "signin" ? "current-password" : "new-password"} value={password}
@@ -208,15 +208,15 @@ function LoginPage() {
                     <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} className="h-4 w-4 rounded border-slate-300" />
                     Remember Me
                   </label>
-                  <a href="#" className="font-medium text-blue-600 hover:underline">Forgot Password?</a>
+                  <a href="#" className="font-medium text-[#D71E28] hover:underline">Forgot Password?</a>
                 </div>
               )}
 
               {error && <p className="rounded bg-red-50 px-3 py-2 text-sm text-red-600">{error}</p>}
-              {info && <p className="rounded bg-blue-50 px-3 py-2 text-sm text-blue-700">{info}</p>}
+              {info && <p className="rounded bg-[#D71E28]/10 px-3 py-2 text-sm text-[#D71E28]">{info}</p>}
 
               <button type="submit" disabled={loading}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 transition hover:bg-blue-700 disabled:opacity-60">
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#D71E28] py-3 text-sm font-semibold text-white shadow-lg shadow-[#D71E28]/30 transition hover:bg-[#B0181F] disabled:opacity-60">
                 <Lock className="h-4 w-4" />
                 {loading ? (mode === "signin" ? "Signing in…" : "Creating account…") : (mode === "signin" ? "Sign In" : "Create Account")}
               </button>
@@ -228,7 +228,7 @@ function LoginPage() {
               <button
                 type="button"
                 onClick={toggleMode}
-                className="w-full rounded-lg border border-blue-600 py-3 text-sm font-semibold text-blue-600 hover:bg-blue-50"
+                className="w-full rounded-lg border border-[#D71E28] py-3 text-sm font-semibold text-[#D71E28] hover:bg-[#D71E28]/5"
               >
                 {mode === "signin" ? "Create Account" : "Back to Sign In"}
               </button>
@@ -262,7 +262,7 @@ function LoginPage() {
             { icon: Smartphone, title: "Bank Anywhere", desc: "Access your accounts anytime, anywhere on any device." },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex items-start gap-3">
-              <div className="rounded-full border border-blue-200 bg-white p-2 text-blue-600"><Icon className="h-5 w-5" /></div>
+              <div className="rounded-full border border-[#D71E28]/20 bg-white p-2 text-[#D71E28]"><Icon className="h-5 w-5" /></div>
               <div>
                 <div className="text-sm font-semibold text-slate-900">{title}</div>
                 <div className="text-xs text-slate-500">{desc}</div>
@@ -276,9 +276,9 @@ function LoginPage() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-6 py-4 text-xs text-slate-500">
           <span className="flex items-center gap-1"><Lock className="h-3 w-3" /> SSL Secured</span>
           <span>|</span><span>© 2026 SMITH BANK. All rights reserved.</span>
-          <span>|</span><a href="#" className="text-blue-600">Privacy Policy</a>
-          <a href="#" className="text-blue-600">Terms of Use</a>
-          <a href="#" className="text-blue-600">Security Center</a>
+          <span>|</span><a href="#" className="text-[#D71E28]">Privacy Policy</a>
+          <a href="#" className="text-[#D71E28]">Terms of Use</a>
+          <a href="#" className="text-[#D71E28]">Security Center</a>
         </div>
       </footer>
     </div>
