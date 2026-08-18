@@ -185,16 +185,15 @@ function Dashboard() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#5c0e13] via-[#8f1620] to-[#D71E28]" />
-        <img src={cityImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-screen" />
+        <img src={cityImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="relative mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 sm:py-12 md:grid-cols-2 md:gap-8">
-          <div className="flex flex-col justify-center text-white">
+          <div className="flex flex-col justify-center text-slate-900">
             <p className="text-base font-light sm:text-lg">Good morning,</p>
             <h1 className="truncate text-3xl font-bold sm:text-4xl md:text-5xl">{name}</h1>
-            <p className="mt-3 max-w-sm text-sm text-white/80 sm:text-base">
+            <p className="mt-3 max-w-sm text-sm text-slate-700 sm:text-base">
               Here's what's happening with your accounts today.
             </p>
-            <button className="mt-6 w-fit rounded-lg border border-white/50 px-5 py-2.5 text-sm font-medium hover:bg-white/10">
+            <button className="mt-6 w-fit rounded-lg border border-slate-900/50 px-5 py-2.5 text-sm font-medium hover:bg-slate-900/10">
               View Financial Overview
             </button>
           </div>
